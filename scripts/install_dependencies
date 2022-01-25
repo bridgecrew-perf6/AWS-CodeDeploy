@@ -1,2 +1,7 @@
 echo "hello"
 # apt-get install -y nginx
+hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies
+      timeout: 300
+      runas: root
